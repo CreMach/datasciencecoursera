@@ -1,0 +1,57 @@
+
+Features and Meanings of Data 
+=============================
+
+ID_Activity
+-----------
+
+Denotes the ID of test subject and her activity when data is collected, there are a total of 30 test subjects with 6 different kind of activities namely 
+laying, sitting, standing, walking, walking downstairs and walking upstairs giving rise to 180 different combinations.
+For example, an ID_Activity that reads "12 Standing" means data were taken from test subject 12 when she was standing.
+
+Understanding the meaning of different variables
+----------------------------------------------------
+The main variables in these data (see Reference [1]) come from an accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals 
+(prefix 't' to denote time). The acceleration signal was further separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) while body 
+linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional 
+signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). Finally a Fast Fourier 
+Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. 
+(Note the 'f' to indicate frequency domain signals). These signals were used to estimate variables of the feature vector for each pattern:  '-XYZ' is used 
+to denote 3-axial signals in the X, Y and Z directions.
+
+Thre are a total of 33 main variables
+
+tBodyAcc-in direction X, Y, Z
+tGravityAcc-in direction X, Y, Z
+tBodyAccJerk-in direction X, Y, Z
+tBodyGyro-in direction X, Y, Z
+tBodyGyroJerk-in direction X, Y, Z
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-in direction X, Y, Z
+fBodyAccJerk-in direction X, Y, Z
+fBodyGyro-in direction X, Y, Z
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+For each test subject with each activity, we compile the mean and standard deviation for each main variables
+
+mean(): Mean value
+std(): Standard deviation
+
+As a result, we have a total of 66 variables for each particular test subject doing a specific activity. Also note that each variable is normalized and
+is bounded within [-1,1].
+
+
+Reference:
+===========
+[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+
+This dataset is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.
+
+Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
