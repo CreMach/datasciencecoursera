@@ -8,7 +8,7 @@ featurefile<-"./UCI Dataset/features.txt"
 feature<-read.table(featurefile)
 colnames(tr_X)<-feature[,2]
 
-tr_X2<-tr_X[,grepl("mean",colnames(tr_X))|grepl("std",colnames(tr_X))]
+tr_X2<-tr_X[,(grepl("mean()",colnames(tr_X))|grepl("std()",colnames(tr_X)))&!grepl("meanFreq",colnames(tr_X))]
 
 trainyfile<-"./UCI Dataset/train/y_train.txt"
 tr_Y<-read.table(trainyfile)
@@ -29,7 +29,7 @@ testxfile<-"./UCI Dataset/test/X_test.txt"
 te_X<-read.table(testxfile)
 
 colnames(te_X)<-feature[,2]
-te_X2<-te_X[,grepl("mean",colnames(te_X))|grepl("std",colnames(te_X))]
+te_X2<-te_X[,(grepl("mean()",colnames(te_X))|grepl("std()",colnames(te_X)))&!grepl("meanFreq",colnames(te_X))]
 
 testyfile<-"./UCI Dataset/test/y_test.txt"
 te_Y<-read.table(testyfile)
